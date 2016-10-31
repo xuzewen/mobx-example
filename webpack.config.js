@@ -90,7 +90,8 @@ switch (environment) {
                   query: {
                       presets: ['es2015-loose', 'stage-0'],
                       //缓存增加打包效率
-                      cacheDirectory: true
+                      cacheDirectory: true,
+                      plugins: ["transform-decorators-legacy"]
                   },
                   happy: {id:'js'}
               },

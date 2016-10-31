@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import { render } from 'react-dom'
 import {Router, Route, IndexRoute, IndexRedirect, browserHistory, hashHistory,useRouterHistory } from 'react-router'
 import {createHashHistory} from 'history'
+import Demo from './containers/App';
+import AppState from './mobx/AppState';
+
+const appState = new AppState();
 
 const history = useRouterHistory(createHashHistory)({queryKey: false})
 
@@ -14,6 +18,7 @@ class Page extends Component{
 
         return (
             <div>
+                <Demo appState={appState} />
                 {
                     this.props.children
                 }

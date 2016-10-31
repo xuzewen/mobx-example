@@ -4,8 +4,12 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "clean": "rimraf build",
+    "dist": "npm run clean && cross-env NODE_ENV=dist webpack -p",
+    "build": "npm run clean && cross-env NODE_ENV=build webpack",
+    "start": "node server.js dev",
+    "lint": "eslint src",
+    "debug": "DEBUG=true node server.js dev"
   },
   "repository": {
     "type": "git",
