@@ -10,7 +10,6 @@ class App extends Component {
         <button onClick={this.onReset}>
           Seconds passed: {this.props.appState.timer}
         </button>
-        <DevTools />
       </div>
     );
   }

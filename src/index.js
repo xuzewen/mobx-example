@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import {Router, Route, IndexRoute, IndexRedirect, browserHistory, hashHistory,useRouterHistory } from 'react-router'
 import {createHashHistory} from 'history'
 import Demo from './containers/App';
-import AppState from './mobx/AppState';
+import AppState from './store/AppState';
 
 const appState = new AppState();
 
