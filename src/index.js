@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 import { Provider } from 'mobx-react'
 import { useStrict } from 'mobx'
 import { render } from 'react-dom'
-import {Router, Route, IndexRoute, IndexRedirect, browserHistory, hashHistory,useRouterHistory } from 'react-router'
-import {createHashHistory} from 'history'
+import { Router, Route, IndexRoute, IndexRedirect, browserHistory, hashHistory, useRouterHistory } from 'react-router'
+import { createHashHistory } from 'history'
 import DevTools from 'mobx-react-devtools'
 import rootStore from './stores'
 
@@ -13,7 +13,7 @@ import Fetch from './containers/Fetch'
 
 useStrict(true);
 
-const history = useRouterHistory(createHashHistory)({queryKey: false})
+const history = useRouterHistory(createHashHistory)({ queryKey: false })
 
 function renderDevTools() {
     if (__DEBUG__) {
@@ -25,8 +25,8 @@ function renderDevTools() {
     return null
 }
 
-class Page extends Component{
-    constructor(props){
+class Page extends Component {
+    constructor(props) {
         super(props)
     }
 
@@ -44,37 +44,37 @@ class Page extends Component{
 
 const routes = (
     <Route path="/" component={Page}>
-        <IndexRedirect to="index"/>
+        <IndexRedirect to="index" />
         <Route path="index">
-            <IndexRoute component={Todo}/>
+            <IndexRoute component={Todo} />
         </Route>
         <Route path="fetch">
-            <IndexRoute component={Fetch}/>
+            <IndexRoute component={Fetch} />
         </Route>
     </Route>
 )
 
 
 
-export default class App extends Component{
-    constructor(props){
+export default class App extends Component {
+    constructor(props) {
         super(props)
     }
 
-     render() {
+    render() {
         return (
-        	<Router history={history}>
-			    {routes}
-			</Router>
+            <Router history={history}>
+                {routes}
+            </Router>
         )
-     }
+    }
 
 }
 
 
 
 
-render( 
+render(
     <div>
         <Provider {...rootStore}>
             <App />
