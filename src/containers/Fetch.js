@@ -37,7 +37,7 @@ export default class Fetch extends Component {
   
   changeType(typeName) {
       this.props.NewsStore.changeType(typeName)
-      this.props.NewsStore.fetch(typeName)
+      this.props.NewsStore.fetch()
   }
 
   render() {
