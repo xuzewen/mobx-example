@@ -1,5 +1,4 @@
 import {observable, computed, autorunAsync, action, autorun} from 'mobx'
-import io from '../libs/io'
 import FetchStore from './FetchStore'
 
 
