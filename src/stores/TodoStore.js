@@ -23,7 +23,7 @@ class TodoStore{
     @observable filter
 
     constructor() {
-        this.todoList = [new TodoItem('111',1),new TodoItem('222',2)]
+        this.todoList = [ new TodoItem('111',1), new TodoItem('222',2) ]
         this.filter = ''
         this.index = 2
     }

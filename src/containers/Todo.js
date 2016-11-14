@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import TodoList from '../components/TodoList'
 import Filter from '../components/Filter'
 
-@inject('TodoStore') @observer
+@inject('TodoStore','NewsStore') @observer
 export default class Todo extends Component {
 
     render() {
