@@ -1,4 +1,4 @@
-import {observable, computed, autorunAsync, action} from 'mobx'
+import {observable, computed, autorun, autorunAsync, action} from 'mobx'
 
 class TodoItem{
     @observable text
@@ -7,6 +7,13 @@ class TodoItem{
     constructor(text, index){
         this.text = text
         this.index = index
+
+        autorun(()=>{
+            console.log('autorun', this.index)
+        })
+        autorunAsync(()=>{
+            console.log('autorunAsync', this.text)
+        },1000)
     }
 }
 

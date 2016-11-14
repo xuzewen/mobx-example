@@ -9,7 +9,7 @@ export default class TodoList extends Component{
     }
     
     render() {
-        console.log(this.props.todoList)
+        // console.log(this.props.todoList)
         return (
             <ul>
                 {
